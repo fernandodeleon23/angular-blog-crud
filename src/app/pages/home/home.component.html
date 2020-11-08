@@ -1,0 +1,19 @@
+
+<div class="container">
+		
+    <div class="posts">
+
+        <article *ngFor="let post of posts">
+            <div class="img-cont">
+                <img src="https://back.test.ferdeleon.com/image/{{ post.image }}" alt="">
+            </div>
+            <h2 class="post-title">{{ post.title }}</h2>
+            <div class="the-excerpt mb-4" [innerHTML]="post.excerpt"></div>
+            <a [routerLink]="['/post', post.id]" class="read-more btn btn-secondary">Leer más</a>
+        </article>
+           
+        <div class="alert alert-info" *ngIf="posts == '0'">No hay artículos para mostrar</div>
+        
+    </div>
+
+</div>

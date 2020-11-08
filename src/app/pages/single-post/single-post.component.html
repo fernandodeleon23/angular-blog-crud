@@ -1,0 +1,9 @@
+
+<div class="container">
+		
+    <article class="single-post" *ngIf="post">
+        <h3 class="section-title mb-4">{{ post.title }}</h3>
+
+        <div class="the-content" [innerHTML]="post.content"></div>
+    </article>
+</div>
